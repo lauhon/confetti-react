@@ -436,7 +436,7 @@ var ConfettiReactInternal = /*#__PURE__*/function (_Component) {
       rest[_key - 1] = arguments[_key];
     }
 
-    _this = _Component.call.apply(_Component, [this, props].concat(rest)) || this;
+    _this = _Component.call(this, props, [].concat(rest)) || this;
     _this.canvas = React__default.createRef();
     _this.canvas = props.canvasRef || ref;
     return _this;

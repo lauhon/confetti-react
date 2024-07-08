@@ -1,4 +1,4 @@
-import React, { Component, CanvasHTMLAttributes } from 'react';
+import React, { CanvasHTMLAttributes, Component } from 'react';
 import Confetti, { ConfettiOptions, confettiDefaults } from './Confetti';
 
 const ref = React.createRef<HTMLCanvasElement>();
@@ -44,8 +44,8 @@ class ConfettiReactInternal extends Component<Props> {
 
   confetti?: Confetti;
 
-  constructor(props: Props, ...rest: any[]) {
-    super(props, ...rest);
+  constructor(props: Props, ...rest: any) {
+    super(props, [...rest]);
     this.canvas = (props.canvasRef as React.RefObject<HTMLCanvasElement>) || ref;
   }
 
